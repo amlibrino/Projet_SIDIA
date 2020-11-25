@@ -1,0 +1,23 @@
+<apex:page standardController="Opportunity" lightningStylesheets="TRUE" showHeader="TRUE" docType="html-5.0">
+    <apex:SectionHeader title="New Opportunity"> 
+        <apex:form >
+            <apex:pageBlock title="Add Opportunity"  mode="edit">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!save}" value="Save" style="background-color: green;color:white"/>
+                    <apex:commandButton action="{!cancel}" value="Cancel" immediate="true" style="background-color: #d9534f;color:white"/>
+                </apex:pageBlockButtons> 
+                <apex:pageBlockSection >
+                    <apex:inputField value="{!Opportunity.Name}" />
+                    <apex:inputField value="{!Opportunity.AccountId}" />
+                    <apex:inputField value="{!Opportunity.Marque__c}" /> 
+                    <apex:inputField value="{!Opportunity.Modele__c}" /> 
+                    <apex:inputField value="{!Opportunity.Annee__c}" />  
+                    <apex:inputField value="{!Opportunity.Stagename}" />
+                    <apex:inputField value="{!Opportunity.motif_de_perte__c}" /> 
+                    <apex:inputCheckbox value="{!Opportunity.Creer_une_tache__c}" />
+                    <apex:inputField showDatePicker="TRUE" value="{!Opportunity.CloseDate}" required="TRUE" /> 
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:form>
+    </apex:SectionHeader>
+</apex:page>
